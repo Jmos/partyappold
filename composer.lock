@@ -169,16 +169,16 @@
         },
         {
             "name": "atk4/ui",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "e96a8123468a257d974bc5d92f3b48dccd6f92e9"
+                "reference": "dad8054505c924afdea9f9c76ecac7741b89babf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/e96a8123468a257d974bc5d92f3b48dccd6f92e9",
-                "reference": "e96a8123468a257d974bc5d92f3b48dccd6f92e9",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/dad8054505c924afdea9f9c76ecac7741b89babf",
+                "reference": "dad8054505c924afdea9f9c76ecac7741b89babf",
                 "shasum": ""
             },
             "require": {
@@ -227,7 +227,7 @@
                 "web",
                 "widget"
             ],
-            "time": "2018-05-16T09:15:33+00:00"
+            "time": "2018-05-22T21:02:26+00:00"
         },
         {
             "name": "psr/log",

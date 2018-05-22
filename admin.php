@@ -1,6 +1,13 @@
 <?php
 
-require 'vendor/autoload.php';
+
+require 'init.php';
+
+$app = new myApp($is_admin = true);
+
+$app->add('CRUD')->setModel(new Guest($app->db));
+
+exit;
 
 
 $app = new \atk4\ui\App('Welcome to Agile Toolkit');
