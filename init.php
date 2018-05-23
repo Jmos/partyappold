@@ -6,7 +6,8 @@ class myApp  extends \atk4\ui\app{
 		parent::__construct('Party App.');
 		if ($is_admin){
 			$this->initLayout('Admin');
-			$this->layout->menuLeft->addItem(['Guests','icon'=>'birthday cake']);
+            $this->layout->menuLeft->addItem(['Dashboard','icon'=>'user'],['dashboard']);
+			$this->layout->menuLeft->addItem(['Guests','icon'=>'birthday cake'],['admin']);
 		}
 		else {
 			$this->initLayout('Centered');
@@ -19,9 +20,17 @@ class Guest extends \atk4\data\Model {
 	public $table ='guest';
 	function init(){
 		parent::init();
-		$this->addFields(['name','surname','phone','email']);
-		$this->addField('age');
-		$this->addField('units_of_drink');
+		$this->addFields([
+		    ['name','required'=>true],
+            'surname',
+            ['phone','required'=>true],
+            ['email','required'=>true]]);
+		$this->addField('age',['required'=>true]);
+		$this->addField('gender',['enum'=>['male','female']]);
+		$this->addField('units_of_drink',['ui'=>['hint'=>'Bring...'],'default'=> 0]);
 		
 	}
+}
+class Dashboard extends \atk4\ui\View {
+    public $defaultTemplate = __DIR__.'/dashboard.html';
 }
